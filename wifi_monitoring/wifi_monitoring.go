@@ -3,37 +3,42 @@
 package wifi_monitoring
 
 import (
-	"fmt"
 	"os/exec"
 	"strings"
 )
 
 // import necessary packages
 
-type WiFiConnection struct {
-	Internet string
-	Address  string
-	Physical string
+type WiFiConnections struct {
+	IP   string
+	Mac  string
+	Type string
 }
 
-func MonitorWiFiConnections() error {
+func MonitorWiFiConnections() (*error, *[]WiFiConnections) {
 	// Execute the system command to retrieve the ARP table
 	cmd := exec.Command("arp", "-a")
 	output, err := cmd.Output()
 	if err != nil {
-		return err
+		return &err, nil
 	}
+
+	wifiConnectionTable := []WiFiConnections{}
 
 	// Parse the output to extract MAC addresses and IP addresses
 	lines := strings.Split(string(output), "\n")
 	for _, line := range lines {
 		fields := strings.Fields(line)
-		if len(fields) >= 3 && !strings.HasPrefix(fields[0], "Interface") {
-			ip := fields[0]
-			mac := fields[1]
-			fmt.Printf("IP: %s, MAC: %s\n", ip, mac)
+		if len(fields) >= 3 && !strings.HasPrefix(fields[0], "Interface") && !strings.Contains(fields[0], "Internet") {
+			wifiConnection := WiFiConnections{
+				IP:   fields[0],
+				Mac:  fields[1],
+				Type: fields[2],
+			}
+			wifiConnectionTable = append(wifiConnectionTable, wifiConnection)
+
 		}
 	}
 
-	return nil
+	return nil, &wifiConnectionTable
 }
