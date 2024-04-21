@@ -6,12 +6,6 @@ import (
 	"whoisonmywifi/wifi_monitoring"
 )
 
-var (
-	RouterIP = "192.168.100.1"
-	UserName = "root"
-	Password = "admin"
-)
-
 func main() {
 
 	// Function to to get WiFi Connection data
@@ -23,8 +17,9 @@ func main() {
 
 	for _, t := range *w {
 		fmt.Printf("IP: %s, MAC: %s, Type: %s\n", t.IP, t.Mac, t.Type)
-		result, _ := device_details.FindDeviceName(RouterIP, UserName, Password, t.Mac)
-		fmt.Printf(result)
+		// Get Device name from Router
+		//result, _ := device_details.FindDeviceName(RouterIP, UserName, Password, t.Mac)
+		device_details.GetDeviceInformationPCAP()
 	}
 
 }
