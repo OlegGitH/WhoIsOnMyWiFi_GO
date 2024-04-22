@@ -1,3 +1,45 @@
-###WhoIsOnMyWiFi
+# WhoIsOn My WiFi
 
-WhoIsOnMyWiFi is an application that will show you who uses your wifi.
+## Description
+
+WhoIsOn My WiFi is a powerful network scanning application designed to provide detailed information about devices connected to your WiFi network. By scanning the network, the app retrieves PCAP (Packet Capture) data along with MAC addresses and IP addresses of all devices currently utilizing the network.
+
+With WhoIsOn My WiFi, you can effortlessly monitor your network activity, identify unauthorized devices, and ensure the security of your WiFi connection. Whether you're a home user concerned about intruders or a network administrator managing a large-scale network, this app offers invaluable insights into your network's usage.
+
+## Features
+
+- **Network Scanning**: Scan your WiFi network to detect all connected devices.
+- **PCAP Information**: Retrieve Packet Capture data to analyze network traffic.
+- **Device Identification**: Obtain MAC addresses and IP addresses of connected devices.
+- **Real-time Monitoring**: Continuously monitor network activity for new connections.
+- **Security Assurance**: Identify unauthorized devices and potential security threats.
+- **User-Friendly Interface**: Intuitive design for easy navigation and usage.
+
+## How to Use
+
+1. **Launch the App**: Open WhoIsOn My WiFi on your device.
+2. **Scan Network**: Initiate a network scan to detect all connected devices.
+3. **View Results**: Review the list of devices along with their MAC and IP addresses.
+4. **Analyze PCAP Data**: Access Packet Capture information for detailed network analysis.
+5. **Take Action**: Identify unauthorized devices and take necessary security measures.
+
+## Requirements
+
+- Android/iOS device with the latest version of the app installed.
+- Active WiFi network connection.
+
+## Support
+
+For any inquiries, feedback, or technical support issues, please contact us at [support@whoisonmywifi.com](mailto:support@whoisonmywifi.com).
+
+## Privacy Policy
+
+Your privacy is important to us. Please refer to our [Privacy Policy](https://whoisonmywifi.com/privacy) for information on how we collect, use, and disclose your personal information.
+
+## License
+
+WhoIsOn My WiFi is licensed under the [MIT License](https://opensource.org/licenses/MIT). See the `LICENSE` file for more details.
+
+## Disclaimer
+
+This application is intended for informational and educational purposes only. The developers are not responsible for any misuse or unauthorized access to network data. Use it responsibly and adhere to applicable laws and regulations in your jurisdiction.
