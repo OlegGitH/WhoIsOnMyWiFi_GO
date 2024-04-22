@@ -18,8 +18,9 @@ func main() {
 	for _, t := range *w {
 		fmt.Printf("IP: %s, MAC: %s, Type: %s\n", t.IP, t.Mac, t.Type)
 		// Get Device name from Router
-		//result, _ := device_details.FindDeviceName(RouterIP, UserName, Password, t.Mac)
+		result, _ := device_details.GetDeviceNameByMAC(t.Mac)
 		device_details.GetDeviceInformationPCAP()
+		fmt.Print(result)
 	}
 
 }
